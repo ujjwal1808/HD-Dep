@@ -94,6 +94,7 @@ const io = new Server(server, {
 	cors: {
 		origin: "https://hd-dep-1.onrender.com", // Add more origins if needed
 		credentials: true,
+		methods: ["GET", "POST"]
 	},
 });
 
