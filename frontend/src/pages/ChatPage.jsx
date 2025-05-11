@@ -6,7 +6,7 @@ import Cookies from "js-cookie";
 import io from "socket.io-client";
 import { toast } from "react-hot-toast"; // ✅ Make sure this is installed and configured
 
-const ENDPOINT = "http://localhost:8000";
+const ENDPOINT = "https://hd-dep.onrender.com";
 let socket;
 
 const ChatPage = () => {
@@ -35,7 +35,7 @@ const ChatPage = () => {
   const fetchMessages = async (userId, otherUserId) => {
     try {
       const response = await fetch(
-        `http://localhost:8000/api/v1/chats/send/${userId}/${otherUserId}`,
+        `https://hd-dep.onrender.com/api/v1/chats/send/${userId}/${otherUserId}`,
         {
           method: "GET",
           headers: {
