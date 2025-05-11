@@ -76,7 +76,7 @@ app.get("/getallposts", async (req, res) => {
 });
 
 // Serve frontend in production
-if (process.env.NODE_ENV === "production") {
+if (process.env.NODE_ENV === "development") {
 	app.use(express.static(path.join(__dirname, "/frontend/dist")));
 	app.get("*", (req, res) => {
 		res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
@@ -84,7 +84,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Start server
-const server = app.listen(PORT, '0.0.0.0', () => {
+const server = app.listen(PORT, () => {
 	console.log(`✅ Server running on http://localhost:${PORT}`);
 });
 
