@@ -36,7 +36,7 @@ app.use(cookieParser());
 
 // CORS configuration
 if (process.env.NODE_ENV !== "production") {
-	const allowedOrigins = ['http://localhost:5173', 'http://localhost:3000'];
+	const allowedOrigins = ['https://hd-dep-1.onrender.com', 'http://localhost:3000'];
 
 	app.use(cors({
 		origin: function (origin, callback) {
@@ -50,7 +50,7 @@ if (process.env.NODE_ENV !== "production") {
 	}));
 } else {
 	app.use(cors({
-		origin: "http://localhost:5173",
+		origin: "https://hd-dep-1.onrender.com",
 		credentials: true
 	}));
 }
@@ -92,7 +92,7 @@ const server = app.listen(PORT, () => {
 const io = new Server(server, {
 	pingTimeout: 60000,
 	cors: {
-		origin: "http://localhost:5173", // Add more origins if needed
+		origin: "https://hd-dep-1.onrender.com", // Add more origins if needed
 		credentials: true,
 	},
 });
