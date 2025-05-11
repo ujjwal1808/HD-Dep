@@ -25,7 +25,7 @@ dotenv.config();
 
 // Create Express app
 const app = express();
-const PORT = 10000;
+const PORT = 8000;
 
 // Connect to MongoDB
 connectDB();
